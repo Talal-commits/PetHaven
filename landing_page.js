@@ -1,24 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Initial pets data same as your hardcoded ones:
-  const initialPets = [
-    {
-      name: "Whiskey",
-      type: "dog",
-      age: "4",
-      image: "../images/1.jpg"
-    },
-    {
-      name: "Buddy",
-      type: "dog",
-      age: "4",
-      image: "../images/2.jpg"
-    }
-  ];
-
-  // Initialize localStorage with initialPets if empty
-  if (!localStorage.getItem("pets")) {
-    localStorage.setItem("pets", JSON.stringify(initialPets));
-  }
 
   const animalTypeSelect = document.getElementById("animal-type");
   const filterBySelect = document.getElementById("filter-by");

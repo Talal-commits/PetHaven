@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Madimi+One&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
 * {
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -32,7 +32,7 @@
 
 .links li a {
     text-decoration: none;
-    color: rgb(126, 126, 126);
+    color: #7e7e7e;
 }
 
 .first {

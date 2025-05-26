@@ -170,7 +170,7 @@ main{
   display: flex;
   justify-content: center;
   margin: 20px 0;
-  gap: 40px; /* to match your .numbers spacing */
+  gap: 40px;
 }
 
 .pagination button {

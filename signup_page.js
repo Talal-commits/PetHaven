@@ -1,11 +1,9 @@
-// Import the functions you need from the SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
 import {
   getAuth,
   createUserWithEmailAndPassword,
 } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-auth.js";
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCvrloeHNgPGJRQ37XREd4H1f__nOhw2JU",
   authDomain: "pethaven-24b33.firebaseapp.com",
@@ -16,20 +14,17 @@ const firebaseConfig = {
   measurementId: "G-8L4L9RC12C",
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Add event listener for form submission
 const submit = document.getElementById("submit");
 submit.addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault();
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
   createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // User successfully signed up
       const user = userCredential.user;
 
       alert("Account has been created, click ok to proceed thanks!");

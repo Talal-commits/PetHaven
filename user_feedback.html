@@ -1,83 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="user_feedback.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="user_feedback.css">
+</head>
+<body>
     <header>
-      <div class="navbar">
-        <div class="logo">
-          <img src="logo.png" alt="PetHaven Logo" />
+        <div class="first">
+            <div class="image">
+                <img src="logo.png" alt="">
+            </div>
+            <div class="links">
+                <li><a href="landing_page.html">Pet Listing</a></li>
+                <li><a href="shelter_Dashboard.html">Shelter Dashboard</a></li>
+                <li><a href="user_feedback.html">User Feedback</a></li>
+            </div>
+            <div class="logout">
+                <button>logout</button>
+            </div>
         </div>
-        <ul class="nav-links">
-          <li><a href="landing_page.html">Pet Listing</a></li>
-          <li><a href="shelter_Dashboard.html">Shelter Dashboard</a></li>
-          <li><a href="user_feedback.html" class="active">User Feedback</a></li>
-        </ul>
-        <div class="logout">
-          <button>Logout</button>
-        </div>
-      </div>
     </header>
 
-    <main class="feedback-container">
-      <h2>We Value Your Feedback!</h2>
-      <p>Help us improve PetHaven by sharing your thoughts.</p>
+    <main class="main-content">
+        <form class="feedback-form">
+            <h2 class="form-title">We value your Feedback!</h2>
+            <p class="form-subtitle">Help us improve Pet Haven by sharing your thoughts.</p>
+            
+            <div class="form-group">
+                <label class="form-label" for="name">Name:</label>
+                <input type="text" id="name" name="name" class="form-input">
+            </div>
 
-      <form id="feedbackForm">
-        <label for="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Your name"
-          required
-        />
+            <div class="form-group">
+                <label class="form-label" for="email">Email:</label>
+                <input type="email" id="email" name="email" class="form-input">
+            </div>
 
-        <label for="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          placeholder="Your email"
-          required
-        />
+            <div class="form-group">
+                <label class="form-label" for="rating">Rating:</label>
+                <textarea id="rating" name="rating" class="form-textarea" placeholder="Share your thoughts..."></textarea>
+            </div>
 
-        <label for="rating">Rating:</label>
-        <select id="rating" name="rating" required>
-          <option value="" disabled selected>Select rating</option>
-          <option value="5">5 - Excellent</option>
-          <option value="4">4 - Good</option>
-          <option value="3">3 - Average</option>
-          <option value="2">2 - Poor</option>
-          <option value="1">1 - Terrible</option>
-        </select>
-
-        <label for="message">Feedback:</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="5"
-          placeholder="Write your feedback here..."
-          required
-        ></textarea>
-
-        <button type="submit">Submit Feedback</button>
-      </form>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
     </main>
-
-    <footer>
-      <p>&copy; 2025 PetHaven. All rights reserved.</p>
-    </footer>
-
-    <script type="module">
-      import Chatbot from "https://cdn.jsdelivr.net/npm/@denserai/embed-chat@1/dist/web.min.js";
-      Chatbot.init({
-        chatbotId: "0682d0df-528d-4c12-9c60-ac1d3bf8d1b5",
-      });
-    </script>
-  </body>
+</body>
 </html>

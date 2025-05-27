@@ -1,27 +1,22 @@
-// Grab the existing button and modal elements
 const addPetBtn = document.querySelector('.AddPet');
 const modal = document.getElementById('addPetModal');
 const closeModalBtn = document.getElementById('closeModal');
 const addPetForm = document.getElementById('addPetForm');
 
-// Show modal when clicking the existing Add New Pet button
 addPetBtn.addEventListener('click', () => {
   modal.style.display = 'block';
 });
 
-// Close modal when clicking the X
 closeModalBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
-// Close modal when clicking outside the modal content area
 window.addEventListener('click', (event) => {
   if (event.target === modal) {
     modal.style.display = 'none';
   }
 });
 
-// Handle form submission
 addPetForm.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -42,10 +37,9 @@ addPetForm.addEventListener('submit', (e) => {
       type: petType.toLowerCase(),
       name: petName,
       age: petAge,
-      image: event.target.result // base64 encoded image
+      image: event.target.result
     };
 
-    // Save to localStorage
     const existingPets = JSON.parse(localStorage.getItem('pets')) || [];
     existingPets.push(newPet);
     localStorage.setItem('pets', JSON.stringify(existingPets));

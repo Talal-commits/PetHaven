@@ -46,14 +46,13 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.className = i === currentPage ? 'active' : '';
       btn.addEventListener("click", () => {
         currentPage = i;
-        applyFilters(); // reapply filters and re-render page
+        applyFilters();
       });
       paginationContainer.appendChild(btn);
     }
   }
 
   function applyFilters() {
-    // Always read fresh pets from localStorage to include newly added pets
     const pets = JSON.parse(localStorage.getItem("pets")) || [];
 
     const selectedType = animalTypeSelect.value.toLowerCase();
@@ -73,7 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     renderPagination(filteredPets.length, currentPage);
   }
 
-  // Attach event listeners
   animalTypeSelect.addEventListener("change", () => {
     currentPage = 1;
     applyFilters();
@@ -89,6 +87,5 @@ document.addEventListener("DOMContentLoaded", () => {
     applyFilters();
   });
 
-  // Initial display
   applyFilters();
 });

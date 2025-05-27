@@ -31,7 +31,7 @@ submit.addEventListener("click", function (event) {
       const user = userCredential.user;
 
       alert("Login successful! Redirecting to landing page...");
-      window.location.href = "landing_page.html";
+      window.location.href = "index.html";
 
       console.log("User signed in:", user);
     })
